@@ -1,0 +1,237 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Geologica', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* @keyframes slideInLeft {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+} */
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    /* background: linear-gradient(#000000c7,70%,#33333396,rgba(0, 0, 0, 0.863)) */
+    /* url(/IMAGES/rail_gate_by_bisbiswas_dehq31u.jpg) for images */
+}   
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(rgba(0, 0, 0, 0.733),2%,#0000005b,rgba(0, 0, 0, 0.856))
+}
+
+.main {
+    width: 1600px;
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.692),50%,#00000080,rgba(0, 0, 0, 0.849))
+}
+
+.hero header .logo h2 a {
+    display: block;
+    font-size: 40px;
+    font-weight: 550;
+    text-decoration: none;
+    color: rgb(202, 50, 216);
+}
+
+.hero header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45.65px 0 20px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.027);
+    transition: .8s;
+}
+
+nav ul li:not(:last-child) a:hover, 
+nav ul li:not(:last-child) a:focus {
+    border-bottom: 2px solid rgb(202, 50, 216);
+}
+
+nav ul li.active a {
+    border-bottom: 2px solid rgb(202, 50, 216);
+}
+
+nav ul li.btn a {
+    transform: translate(50%,-100%);
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(202, 50, 216);
+    padding: 10px 20px;
+    border-radius: 30px;
+    line-height: 1.4;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 150px;
+}
+
+nav ul li.btn:hover a {
+    border: 1px solid rgb(0, 0, 0);
+    color: black;
+    background: rgb(202, 50, 216);
+    transition: .8s;
+    
+}
+
+.form-box {
+    width: 60%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #00000067;
+    border-radius: 30px;
+    padding: 100px 100px 140px;
+    text-align: center;
+}
+
+.form-box h1 {
+    font-size: 40px;
+    margin-bottom: 60px;
+    color: rgb(202, 50, 216);
+    position: relative;
+}
+
+.form-box h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 30px;
+    background: rgb(202, 50, 216);
+    position: absolute;
+    bottom: -12px;
+    left: 112px;
+    transform: translateX(220%);
+}
+
+.input-field {
+    background: #ffffff;
+    margin: 15px 0;
+    border: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container .input-field i {
+    margin-left: 15px;
+    color: #a74aff;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+.input-field i {
+    margin-left: 15px;
+    color: #a74aff;
+}
+
+form p{
+    text-align: left;
+    font-size: 13px;
+    color: white;
+}
+
+form p a{
+    text-decoration: none;
+    color: #c42effee;
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button {
+    transform: translate(0%, 120%);
+    flex-basis: 48%;
+    background: rgb(202, 50, 216);
+    color: #ffffff;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.input-group {
+    height: 270px;
+}
+
+.btn-field button.disable {
+    background: #eaeaea;
+    color: #555;
+}
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+ img {
+    transform: translate(120%,12%);
+    filter: drop-shadow(10px 10px 10px rgb(202, 50, 216))
+}
+
+    .back-video {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        filter: blur(12px)
+    }
+    @media (min-aspect-ratio: 16/9){
+        .back-video{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-aspect-ratio: 16/9){
+        .back-video{
+            width: auto;
+            height: 100%;
+        }
+    }

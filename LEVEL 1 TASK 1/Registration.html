@@ -1,0 +1,108 @@
+<!-- Registration -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="Registration.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@900&family=Geologica:wght@100;200;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="script.js"></script>
+    <link rel="icon" href="/IMAGES/a.png">
+
+</head>
+
+<body>
+    <div class="container">
+        <section id="registration" class="hero">
+            <div class="main">
+                <header>
+                    <div class="logo">
+                        <h2><a href="#ANIWATCH">ANI<b style="color: rgb(255, 255, 255);">WATCH</b></a></h2>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="About.html">About Us</a></li>
+                            <li class="active" selected><a href="#">Sign up / Sign in</a></li>
+                            <li><a href="#Others">Faq's</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <!-- <img src="/IMAGES/render___gojo_purple_by_ishigagraph_deihpgm.png" alt=""> -->
+
+
+                <div class="form-box">
+                    <h1 id="title">Sign up</h1>
+                    <form action="backend.php">
+                        <div class="input-group">
+                            <div class="input-field" id="nameField">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" placeholder="User Name">
+                            </div>
+                            <div class="input-field">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" placeholder="Email">
+                            </div>
+
+                            <div class="input-field">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" placeholder="Password">
+                            </div>
+
+                            <div class="input-field">
+                                <i class="fa-solid fa-unlock"></i>
+                                <input type="confirm-password" placeholder="Confirm Password">
+                            </div>
+                            <p>Forgot Password? - <a href="#">click here!</a></p>
+                        </div>
+                        <div class="btn-field">
+                            <button type="button" id="signupBtn">Sign up</button>
+                            <button type="button" id="signinBtn" class="disable">Sign in</button>
+
+                        </div>
+                    </form>
+
+        </section>
+
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="/IMAGES/Anime nature in 4k free twixtor anime twixtor moirx.mp4">
+    </div>
+
+    <script>
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("nameField");
+        let title = document.getElementById("title");
+
+
+        signinBtn.onclick = function () {
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign In"
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function () {
+            nameField.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up"
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+    </script>
+</body>
+
+</html>
